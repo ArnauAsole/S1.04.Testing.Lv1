@@ -66,7 +66,6 @@ All test cases should pass, verifying the correct behavior of the system.
 You will see JUnit test results such as:
 
 java
-
 ✓ testBookListIsNotNull
 ✓ testBookListSizeAfterAdding
 ✓ testBookAtSpecificPosition
@@ -139,7 +138,6 @@ Right-click and choose Run, or use the green arrow to execute the tests.
 You should see output similar to:
 
 java
-
 ✓ testDniLetterCalculation[12345678, Z]
 ✓ testDniLetterCalculation[87654321, X]
 ✓ testDniLetterCalculation[11111111, H]
@@ -155,6 +153,78 @@ If included, you can also run Main.java to input a DNI number manually and see t
 
 🌐 Deployment
 This is a simple Java console-based project meant for local testing in your IDE. No deployment is required.
+
+# S1.04.Testing.Lv1.Ex3
+
+# 🛑 ArrayIndexOutOfBoundsException - JUnit Testing
+
+## Exercise Description  
+The goal of this exercise is to create a Java class that contains a method to intentionally throw an `ArrayIndexOutOfBoundsException` when an index out of the array bounds is accessed. The system includes a JUnit test class to verify the proper throwing of the exception when provided with an invalid index.
+
+### Requirements:
+- Create a class `ArrayIndexOutOfBoundsExample` that:
+  - Contains a method `throwExceptionIfOutOfBounds(int index)` which throws an `ArrayIndexOutOfBoundsException` if the given index is outside the valid range of the array.
+  - Uses an array with 5 elements (for example, `{1, 2, 3, 4, 5}`).
+  - Throws the exception for indices less than 0 or greater than or equal to 5.
+- Create a `ArrayIndexOutOfBoundsExampleTest` class using JUnit 5 to:
+  - Verify that the method throws the expected `ArrayIndexOutOfBoundsException` for out-of-bounds indices.
+  - Ensure the method does not throw an exception when a valid index is provided.
+
+### Methods Implemented:
+- `throwExceptionIfOutOfBounds(int index)` – Throws an `ArrayIndexOutOfBoundsException` for invalid indices and accesses the element of the array for valid indices.
+
+## 💻 Technologies Used
+- Java 17  
+- IntelliJ IDEA (Community Edition)  
+- JUnit 5  
+- Maven or Gradle (optional, based on setup)
+
+## 📋 Prerequisites
+- Java JDK 17 installed  
+- IntelliJ IDEA Community Edition  
+- Git (optional, for version control)  
+- Maven or Gradle configured (if using dependency management)
+
+## 🛠️ Installation and Setup
+
+### 1. Install Required Tools
+- **Java JDK 17**: [Download Java](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html)  
+- **IntelliJ IDEA Community Edition**: [Download IntelliJ](https://www.jetbrains.com/idea/download)  
+- **Maven or Gradle** (optional): Use your preferred build tool.
+
+### 2. Clone the Repository (Optional)
+If you're using version control:
+
+```bash
+git clone https://github.com/ArnauAsole/S1.04.Testing.Lv1.git
+cd S1.04.Testing.Lv1/
+```
+
+3. Open the Project
+Open the project folder in IntelliJ IDEA by going to File → Open and selecting the root directory of your project.
+
+▶️ Running the Project
+Option 1: Run JUnit Tests
+Open the ArrayIndexOutOfBoundsExampleTest.java file.
+
+Right-click and choose Run, or use the green arrow to execute the tests.
+
+You should see output similar to:
+
+java
+✓ testThrowExceptionIfOutOfBounds
+Option 2: Run from Main.java (optional)
+If included, you can also run Main.java to input an index manually and see the result in the console.
+
+java
+Caught Exception: Index 10 is out of bounds!
+Caught Exception: Index -1 is out of bounds!
+
+🌐 Deployment
+This is a simple Java console-based project meant for local testing in your IDE. No deployment is required.
+
+🤝 Acknowledgements
+Special thanks to all contributors who helped with the development of this project: Arnau, Adrià, Ignasi, Ana, Alejandro.
 
 🤝 Acknowledgements
 Special thanks to all contributors who helped with the development of this project: Arnau, Adrià, Ignasi, Ana, Alejandro.
