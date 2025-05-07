@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class Library {
     private List<String> books;
@@ -20,11 +21,11 @@ public class Library {
         return books;
     }
 
-    public String getBookByPosition(int position) {
+    public Optional<String> getBookByPosition(int position) {
         if (position >= 0 && position < books.size()) {
-            return books.get(position);
+            return Optional.of(books.get(position));
         } else {
-            return null; // Return null if the position is invalid
+            return Optional.empty(); // Use Optional to avoid returning null
         }
     }
 
