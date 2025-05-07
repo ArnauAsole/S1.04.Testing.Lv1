@@ -1,6 +1,6 @@
-public class ArrayIndexOutOfBoundsExample {
-
-    public int getElement(int[] list, int index) {
-        return list[index];
+public class Array {
+    public int getElementAt(int[] array, int index) {
+        // This will throw ArrayIndexOutOfBoundsException if index is invalid
+        return array[index];
     }
 }
