@@ -11,4 +11,16 @@ public class DniCalculator {
         }
         return LETTERS[dniNumber % 23];
     }
+
+    public static boolean isValidDniFormat(String dniInput) {
+        return dniInput != null && dniInput.matches("\\d{8}");
+    }
+
+    public static char calculateLetter(String dniInput) {
+        if (!isValidDniFormat(dniInput)) {
+            throw new IllegalArgumentException("DNI must have exactly 8 digits (e.g., 01234567)");
+        }
+        int dniNumber = Integer.parseInt(dniInput);
+        return calculateLetter(dniNumber); // reutiliza el método existente
+    }
 }
